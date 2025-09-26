@@ -1,0 +1,145 @@
+body {
+  font-size: 16px; /* Increased from 10px for better readability */
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin: 10px;
+  padding: 10px;
+  background-image: url("wallpaper cute kawaii.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.Container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.box {
+  display: flex;
+  flex-direction: column; /* Stack vertically: tasks on top, controls below */
+  align-items: flex-start; /* Align tasks to left (far north/top-left) */
+  justify-content: flex-start; /* Start from top */
+  width: 100%;
+  gap: 20px; /* Space between tasks and controls */
+  position: relative; /* For any future absolute positioning if needed */
+  margin-top: 20px; /* Space from date section */
+}
+
+.input_task {
+  width: 100%; /* Full width for task list */
+  align-self: flex-start; /* Ensure it's left-aligned (far north) */
+}
+
+.tasks {
+  list-style-position: inside;
+  text-align: left; /* Changed to left for better task list alignment */
+  font-size: 22px; /* Fixed from 220px (typo?) */
+  margin: 0;
+  padding: 10px;
+  list-style-type: none; /* Remove default bullets; add back if needed */ 
+  border-radius: 5px;
+  width:fit-content;
+  border-radius: 10px;
+}
+
+.tasks li {
+  position: relative;
+  padding: 5px;
+  margin-bottom: 5px;
+  padding-left:25px;
+  border-bottom: 1px solid #ccc;
+  text-align: left; 
+   background: rgba(206, 197, 197, 0.9);
+   border-radius: 15px;
+   display: flex;
+   gap: 15px;
+}
+
+.tasks li::before{
+  content: "";
+  left: 15px;
+  top: 50%;
+  position: absolute;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 5px;
+  border: 2px solid;
+  border-radius: 50%;
+  background:transparent;
+}
+.task-checkbox{
+margin-right: 10px;
+cursor: pointer;
+}
+.task-text{
+  flex: 1;
+}
+.task li.completed{
+  text-decoration: line-through;
+  opacity: 0.6;
+  background: rgba(150, 150, 150, 0.5);
+}
+.controls {
+  position: fixed;
+  top: 50%;
+  left: 30%;
+  border: 2px ridge;
+  border-radius: 25px;
+  padding: 20px; /* Reduced from 100px to avoid excessive space */
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+
+  margin: 0 auto; /* Center the controls horizontally (in the middle) */
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3),
+    -3px -3px 10px rgba(255, 255, 255, 0.7);
+  background:rgb(243, 192, 200); 
+}
+.form_task {
+  width: 300px;
+  height: 30px;
+  border: none;
+  outline: none;
+  border-bottom: 2px groove;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 16px;
+  background:rgba(235, 229, 229, 0.9);
+}
+
+.btn {
+  cursor: pointer;
+  width: 100px;
+  margin: 0 auto; /* Fixed for centering */
+  border: solid 1px;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  padding: 8px;
+  transition: background-color 0.3s; /* Smooth hover */
+}
+
+.btn:hover {
+  background-color: #e0e0e0;
+}
+
+#date-today {
+  display: inline; /* Not flex, as it's a span in <p> */
+  gap: 5px; /* Not needed for inline */
+  font-style: italic;
+}
+
+.day-name {
+  font-size: 15px;
+  font-weight: bold; /* Added for visibility */
+  color: #333;
+}
+
+#user-date {
+  margin-top: 5px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}

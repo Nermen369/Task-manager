@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>interactive task manager</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="Container">
+      <h1 class="greeting">“Hello, we hope you have a good day”</h1>
+    </div>
+    <p>Today's date: <span id="date-today" class="day-name"></span></p>
+    <div class="box">
+      <div class="input_task">
+        <ul id="tasks" class="tasks"></ul>
+      </div>
+      <div class="controls">
+        <form id="task-form">
+          <input
+            type="text"
+            class="form_task"
+            placeholder="Enter your task"
+            required
+          />
+          <button type="submit" class="btn">submit</button>
+          <!-- <button type="button" class="cycle-btn btn">Cycle/Repeat</button> -->
+        </form>
+      </div>
+    </div>
+    <div id="parent" class="parent"></div>
+    <script src="index.js"></script>
+  </body>
+</html>
